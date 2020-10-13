@@ -1,13 +1,17 @@
 const readlineSync = require("readline-sync");
-let n = new Number(readlineSync.question('Enter a number between 1 and 10 please'));
+let n = new Number(readlineSync.question('Enter a number please'));
 
-let i = 1
-while (i <= n) {
-	console.log(readlineSync.question('Enter a new number please'));
+let i = 0;
+let numb = 0;
+let somme = 0;
+
+while (i < n) {
+	numb = (readlineSync.question('Enter a new number please'));
+	somme = somme + parseInt(numb);
 	i++;
 }
 
-console.log(n + 1);
+console.log("la somme est" + " " + somme);
 
 
 

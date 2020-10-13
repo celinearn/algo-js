@@ -3,8 +3,8 @@ function calcSurface(lenght, width) {
 }
 
 const readlineSync = require('readline-sync');
-x = readlineSync.question('Give me the lenght of the rectangle please? ');
-y = readlineSync.question('Give me the width of the rectangle please? ');
+let x = readlineSync.question('Give me the lenght of the rectangle please? ');
+let y = readlineSync.question('Give me the width of the rectangle please? ');
 
 console.log("The surface is " + calcSurface(x, y));
 

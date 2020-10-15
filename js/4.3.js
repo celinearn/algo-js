@@ -5,7 +5,7 @@ function rand10() {
 }
 
 let arr = [];
-let howmany = parseInt(readlineSync.question('how many naknfknfkenf?'));
+let howmany = parseInt(readlineSync.question('how many random number do you want? '));
 
 function multiRand10(n) {
 	for (let x=0;x<=(n-1);x++) {

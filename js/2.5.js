@@ -1,8 +1,11 @@
 const readlineSync = require('readline-sync');
-let number = readlineSync.question('What is your favorite number?')
+let number = readlineSync.question('What is your favorite number?');
 
 while (number != 42) {
 	number = readlineSync.question('Are you sure?');
+}
+if (number == 42) {
+	number = readlineSync.question('Nice bro');
 }
 
 

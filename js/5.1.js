@@ -1,8 +1,5 @@
 const readlineSync = require("readline-sync");
 
-
-let a;
-let b;
     
 let serie = {};
 

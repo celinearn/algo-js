@@ -1,24 +1,33 @@
 const readlineSync = require("readline-sync");
 
+
+let a;
+let b;
     
-let a = readlineSync.question("Quel est le nom de la série ? ");
-let b =readlineSync.question("Quel est l'année de production ? ");
-let c = readlineSync.question("Citez des personnages de la série ");
+let serie = {};
 
 function askTvSerie(){ 
     
-    let serie = {
-        Nom : a,
-        Année : b,
-        Personnages : c,
-    }
+        let nom = readlineSync.question("Quel est le nom de la série ? ");
+		let annee = readlineSync.question("Quel est l'année de production ? ");
+		let acteurs = new Number(readlineSync.question("Combien d'acteurs pouvez-vous citer? "));
+   		let c = [];
+
+   		serie.nom = nom;
+   		serie.annee = annee;
+   		for (let x = 0; x < acteurs; x++) {
+   			c.push(readlineSync.question("Le nom: "));	
+   		}
+   		serie.acteurs=c;
 
     
     return serie;  
-}
+
+ }
 
 
-    console.log(askTvSerie()) ;
+askTvSerie();
+    console.log(JSON.stringify(serie));
 
 
 

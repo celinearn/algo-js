@@ -7,19 +7,23 @@ class Rectangle {
 	}
 	// method
 	collides(otherRectangle){
-        if this.topLeftXPos < otherRectangle.topLeftXPos + otherRectangle.width
-		this.topLeftXPos + this.width > otherRectangle.topLeftXPos
-		this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.lenght
-		this.topLeftYPos + this.lenght > otherRectangle.topLeftYPos {
-        	console.log('Collision detected');
-		}else{console.log(`Pas de collision`);}
+        
+        let collides = false;
+        if (this.topLeftXPos + this.width >= otherRectangle.topLeftXPos &&     // r1 right edge past r2 left
+			  this.topLeftXPos <= otherRectangle.topLeftXPos + otherRectangle.width &&       // r1 left edge past r2 right
+			  this.topLeftYPos + this.lenght >= otherRectangle.topLeftYPos &&       // r1 top edge past r2 bottom
+			  this.topLeftYPos <= otherRectangle.topLeftYPos + otherRectangle.lenght) {
+        	collides = true;
+		}
+		return collides;
+	}
 	}
 
-}
 
-let rectangle1 = new Rectangle(250, 50, 0, 50);
-let rectangle2 = new Rectangle(250, 300, 0, -50);
-console.log(rectangle1.collides(Rectangle));
+let rectangle1 = new Rectangle(1, 1, 2, 2);
+let rectangle2 = new Rectangle(30, 20, 10, 50);
+
+console.log(rectangle1.collides(rectangle2));
 
 
 

@@ -1,5 +1,5 @@
 function rand10() {
-	return parseInt(Math.random()*10)+1;
+	return Math.floor(Math.random()*10)+1;
 }
 
 console.log(rand10());
